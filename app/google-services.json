@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "809277234908",
+    "project_id": "controle-de-dados-de-frota",
+    "storage_bucket": "controle-de-dados-de-frota.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809277234908:android:ed9cea38cb6cdef73f9e19",
+        "android_client_info": {
+          "package_name": "br.com.controlecombustiveis"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOSJvPHpXFckGbJE2qppZDU4jvCissX9o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
