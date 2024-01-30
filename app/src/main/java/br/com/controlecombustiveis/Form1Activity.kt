@@ -22,7 +22,7 @@ class Form1Activity : Activity() {
 
         /*Configurações para captura de data atual*/
         val textViewDate = findViewById<TextView>(R.id.textViewDate)
-        val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+        val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()) //data num formato que se pode filtrar
         val date = Date()
         textViewDate.text = dateFormat.format(date)
 
@@ -30,7 +30,7 @@ class Form1Activity : Activity() {
         val inputUser = findViewById<EditText>(R.id.inputUser)
 
         val spinner: Spinner = findViewById<Spinner>(R.id.inputBarco)
-        val options = arrayOf("CAMBORI", "DONA ILVA", "IBIZA", "MARIA CLARA", "KOPESCA", "KOWALSKI V", "MARBELLA I", "KR III", "NATAL PESCA VII", "OULED SI MOHAND", "NATAL PESCA IX", "RIO JAPURA", "RIO POTENGI", "TUNASA I", "LEAL SANTOS 7", "MARLIN II", "MUCURIPE III", "NETUNO S", "TRANSMAR I", "AZTECA III", "GUADALAJARA", "STA PAULINA", "ROMULO", "FILHO DA PROMESSA")
+        val options = arrayOf("SANTA VITORIA", "DURAN", "STEPHANIE SEIF I", "FLAVIA MONTEIRO", "JR LUCAS III", "KIYOMÃ", "WATER FISH", "JOEL SANTOS II")
 
         // Criando um ArrayAdapter usando um simples layout de spinner e a lista de opções
         val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, options)

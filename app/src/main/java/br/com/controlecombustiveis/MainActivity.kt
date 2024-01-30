@@ -41,6 +41,7 @@ class MainActivity : Activity() {
             val email = emailEditText.text.toString()
             val password = passwordEditText.text.toString()
             val rememberMe = rememberMeCheckBox.isChecked
+            val listOfAdminEmails = listOf("silasn364@gmail.com")
 
             /*Lógica para o remember checkbox*/
             if (rememberMe) {
@@ -55,13 +56,18 @@ class MainActivity : Activity() {
             /*Autenticar com Firebase*/
             auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) {
                 task -> if (task.isSuccessful) {
-                // Login bem-sucedido
-                Log.d("Login", "signInWithEmail:success")
-                val user = auth.currentUser
-                // Navegar para a próxima tela ou atualizar a UI
-                val intent = Intent(this, Form1Activity::class.java)
-                startActivity(intent)
-                //Toast.makeText(this, "$user logado com sucesso!", Toast.LENGTH_SHORT).show()
+                    // Login bem-sucedido
+                    Log.d("Login", "signInWithEmail:success")
+                    val user = auth.currentUser
+                    if (user != null && user.email in listOfAdminEmails) {
+                        // O usuário é um administrador
+                        val adminIntent = Intent(this, AdmChoice::class.java)
+                        startActivity(adminIntent)
+                    } else {
+                        // O usuário não é um administrador
+                        val userIntent = Intent(this, Form1Activity::class.java)
+                        startActivity(userIntent)
+                    }
                 } else {
                     // Se falhar, exibir mensagem ao usuário
                     Log.w("Login", "signInWithEmail:failure", task.exception)

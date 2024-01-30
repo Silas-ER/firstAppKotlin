@@ -25,6 +25,9 @@
         <activity android:name=".Form2Activity" />
         <activity android:name=".Failure" />
         <activity android:name=".Success" />
+        <activity android:name=".AdmChoice" />
+        <activity android:name=".AdmQuery" />
+        <activity android:name=".AdmResults" />
     </application>
 
 </manifest>

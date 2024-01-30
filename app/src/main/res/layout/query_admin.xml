@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Imagem como Header -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginBottom="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo" />
+
+        <!-- Titulo Relatório -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gerar relatório"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="4dp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Entrada de Barcos -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Barco: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="4dp"
+            android:layout_marginTop="16dp"/>
+        <Spinner
+            android:id="@+id/filterBoat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Filtro de data -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data Inicial (AAAA-MM-DD):"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="4dp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/textStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data Final (AAAA-MM-DD):"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="4dp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/textEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Botão Filtrar -->
+        <Button
+            android:id="@+id/filterButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Filtrar" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="© Produmar 2024" />
+
+    </LinearLayout>
+</ScrollView>
